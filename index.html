@@ -61,7 +61,9 @@
       <section class="hero">
         <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button">Order Service</button>
+          <button class="hero-button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -463,6 +465,7 @@
               <a
                 class="customers-link"
                 href=""
+                aria-label=""
                 target="_blank"
                 rel="no-referrer noopener"
               >
@@ -472,29 +475,69 @@
               </a>
             </li>
             <li class="customers-item">
-              <svg class="customers-icon" width="104" height="56">
-                <use href="./images/icons-svg.svg#icon-Logo-company"></use>
-              </svg>
+              <a
+                class="customers-link"
+                href=""
+                aria-label=""
+                target="_blank"
+                rel="no-referrer noopener"
+              >
+                <svg class="customers-icon" width="104" height="56">
+                  <use href="./images/icons-svg.svg#icon-Logo-company"></use>
+                </svg>
+              </a>
             </li>
             <li class="customers-item">
-              <svg class="customers-icon" width="104" height="56">
-                <use href="./images/icons-svg.svg#icon-Logo-company3"></use>
-              </svg>
+              <a
+                class="customers-link"
+                href=""
+                aria-label=""
+                target="_blank"
+                rel="no-referrer noopener"
+              >
+                <svg class="customers-icon" width="104" height="56">
+                  <use href="./images/icons-svg.svg#icon-Logo-company3"></use>
+                </svg>
+              </a>
             </li>
             <li class="customers-item">
-              <svg class="customers-icon" width="104" height="56">
-                <use href="./images/icons-svg.svg#icon-Logo-company4"></use>
-              </svg>
+              <a
+                class="customers-link"
+                href=""
+                aria-label=""
+                target="_blank"
+                rel="no-referrer noopener"
+              >
+                <svg class="customers-icon" width="104" height="56">
+                  <use href="./images/icons-svg.svg#icon-Logo-company4"></use>
+                </svg>
+              </a>
             </li>
             <li class="customers-item">
-              <svg class="customers-icon" width="104" height="56">
-                <use href="./images/icons-svg.svg#icon-Logo-company5"></use>
-              </svg>
+              <a
+                class="customers-link"
+                href=""
+                aria-label=""
+                target="_blank"
+                rel="no-referrer noopener"
+              >
+                <svg class="customers-icon" width="104" height="56">
+                  <use href="./images/icons-svg.svg#icon-Logo-company5"></use>
+                </svg>
+              </a>
             </li>
             <li class="customers-item">
-              <svg class="customers-icon" width="104" height="56">
-                <use href="./images/icons-svg.svg#icon-Logo-company6"></use>
-              </svg>
+              <a
+                class="customers-link"
+                href=""
+                aria-label=""
+                target="_blank"
+                rel="no-referrer noopener"
+              >
+                <svg class="customers-icon" width="104" height="56">
+                  <use href="./images/icons-svg.svg#icon-Logo-company6"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -569,5 +612,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn">
+          <svg class="close-btn" data-modal-close width="8" height="8">
+            <use href="./images/icons-svg.svg#icon-close-black-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
