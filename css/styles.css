@@ -474,7 +474,7 @@ img{
     align-items: center;
     justify-content: center;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        ;
+
 }
 
 .customers-link:hover,
@@ -705,7 +705,7 @@ box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08),
 
 .overlay:hover .products-cover-text,
 .overlay:focus .products-cover-text{
-    transform: translateY(0);
+    transform: translateY(0%);
 }
 
 .backdrop{
@@ -761,8 +761,9 @@ box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08),
 .close-btn{
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-btn:hover,
-.close-btn:focus{
+
+.modal-btn:hover .close-btn,
+.modal-btn:focus .close-btn{
     fill: #ffffff;
 }
 
