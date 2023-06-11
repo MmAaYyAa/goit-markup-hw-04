@@ -161,9 +161,7 @@ img{
  
 }
 
-.address-item{
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 .address-link{
   
@@ -171,6 +169,7 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
     
 
@@ -186,7 +185,7 @@ img{
    
     padding:188px 0px;
     background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/people-office\ 1.jpg);
+    url(../images/people-office1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -228,7 +227,7 @@ img{
     min-width: 169px;
     height: 56px;
     border-radius: 4px;
-    border: none;
+    
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 16px 32px;
     margin: auto;
@@ -240,7 +239,7 @@ img{
 .hero-button:focus{
     background-color: #404BBF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-   
+    
 }
 
 /*?------About us------*/
@@ -441,7 +440,6 @@ img{
 }
 .customers-list{
     display: flex;
-    width: calc(100% - (24px*5)/6);
     gap: 24px;
     padding-bottom: 120px;
     
@@ -450,10 +448,10 @@ img{
 .customers-item{
     border: 1px solid #8E8F99;
     border-radius: 4px;
-    width: calc(100% - (24px * 5) / 6);
+    width: calc((100% - 120px )/ 6);
     height: 88px;
     padding: 16px 32px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+    
  
 }
 
@@ -467,9 +465,12 @@ img{
     width: 100%;
     height: 100%;
     border-radius: 4px;
+    border: 1px solid #8e8f99;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        ;
 }
 
 .customers-link:hover,
@@ -558,6 +559,9 @@ img{
 background-color: #31d0aa;
 }
 
+ .footer-soc-icon{
+    fill: #f4f4fd;
+ }
 
 
 /*---------------PORTFOLIO---------------*/
@@ -589,6 +593,10 @@ background-color: #31d0aa;
     border-radius: 4px;
     border: 1px solid #E7E9FC;
     padding: 12px 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-item:hover,
@@ -606,9 +614,9 @@ background-color: #31d0aa;
     flex-wrap: wrap;
     align-content: center;
     gap: 48px 24px;
-    
-        
+       
 }
+
 .cards-content{
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
@@ -643,13 +651,20 @@ background-color: #31d0aa;
 .cards-item{
     display: block;
     text-decoration: none;
-    width: calc(100% - (24px * 2) / 3)
-    
-    
+    width: calc(100% - (24px * 2) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
+.cards-item:hover,
+.cards-item:focus{
+box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
-.cards-content:hover{
+
+.cards-content:hover,
+.cards-content:focus{
     border: 1px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -663,11 +678,18 @@ background-color: #31d0aa;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #F4F4FD;
+    background-color: #4D5AE5;
     width: 360px;
     height: 300px;
-    padding: 40px 32px 164px;
-   
-    
+    padding: 40px 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      
 }
 
 .overlay{
@@ -676,19 +698,9 @@ background-color: #31d0aa;
    
 }
 
-.products-cover-bloc{
-    background-color: #4D5AE5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-.overlay:hover .products-cover-bloc{
-    transform: translate(0);
+.overlay:hover .products-cover-text,
+.overlay:focus .products-cover-text{
+    transform: translateY(0);
 }
 
 .backdrop{
@@ -710,8 +722,8 @@ background-color: #31d0aa;
     width: 408px;
     min-height: 584px;
     background-color: #FCFCFC;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn{
